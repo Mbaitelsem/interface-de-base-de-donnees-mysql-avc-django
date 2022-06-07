@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} formation page {% endblock %}
+{% block content %}
+<br>
+    <h1>Tout les nouveaux nés</h1>
+    <br>
+    {% for nouveaune in nouveaunes %}
+    
+    <div class="card">
+        <h5 class="card-header">{{ nouveaune.nom }}</h5>
+        <div class="card-body">
+          <h5 class="card-title">{{ nouveaune.prenom }}</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="detail_enfant/{{ nouveaune.id }}" class="btn btn-primary">Voir plus</a>
+        </div>
+    </div>
+    <br>
+    {% endfor %}
+      
+        
+{% endblock %}
